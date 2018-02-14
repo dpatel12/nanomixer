@@ -41,7 +41,7 @@ def parse_options(raiconfig: Dict[str, Any]) -> Any:
         |  _ < (_| | | |  | | |>  <  __/ |
         |_| \_\__,_|_|_|  |_|_/_/\_\___|_|
 
-        Mix/scramble RaiBlocks transactions between random local accounts before
+        Mix/scramble Nano transactions between random local accounts before
         sending to the real destination.
 
         Example usage:
