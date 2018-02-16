@@ -24,13 +24,13 @@ You've been warned.**
 ## What is this?
 
 This is a fund mixer/shaker to improve anonymity on
-[RaiBlocks](https://raiblocks.net) transactions. It will create a (configurable)
+[Nano](https://nano.org) transactions. It will create a (configurable)
 number of mixer accounts and send the amount between them and the original
 source account in a number of (configurable) mixing rounds until finally all the
 funds are sent to the destination account. 
 
 This takes advantage of the fast and feeless transactions of the awesome
-[RaiBlocks cryptocurrency](https://raiblocks.net).
+[Nano Cryptocurrency](https://nano.org).
 
 ## Is this safe? 
 
@@ -150,7 +150,7 @@ usage: raimixer [-h] [-w WALLET] [-s SOURCE_ACC] [-c] [-d] [-i INITIAL_AMOUNT]
  | |\  | (_| | | | | (_) | | |  | | |>  <  __/ |   
  |_| \_|\__,_|_| |_|\___/  |_|  |_|_/_/\_\___|_|   
 
-Mix/scramble RaiBlocks transactions between random local accounts before
+Mix/scramble Nano transactions between random local accounts before
 sending to the real destination.
 
 Example usage:
