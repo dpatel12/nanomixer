@@ -35,12 +35,15 @@ def parse_options(raiconfig: Dict[str, Any]) -> Any:
 
     parser = ArgumentParser(description=dedent(
         f'''
-         ____       _ __  __ _
-        |  _ \ __ _(_)  \/  (_)_  _____ _ __
-        | |_) / _` | | |\/| | \ \/ / _ \ '__|
-        |  _ < (_| | | |  | | |>  <  __/ |
-        |_| \_\__,_|_|_|  |_|_/_/\_\___|_|
-
+    
+  _   _          _   _  ____  __  __ _______   ________ _____  
+ | \ | |   /\   | \ | |/ __ \|  \/  |_   _\ \ / /  ____|  __ \ 
+ |  \| |  /  \  |  \| | |  | | \  / | | |  \ V /| |__  | |__) |
+ | . ` | / /\ \ | . ` | |  | | |\/| | | |   > < |  __| |  _  / 
+ | |\  |/ ____ \| |\  | |__| | |  | |_| |_ / . \| |____| | \ \ 
+ |_| \_/_/    \_\_| \_|\____/|_|  |_|_____/_/ \_\______|_|  \_\
+                                                               
+                                                               
         Mix/scramble Nano transactions between random local accounts before
         sending to the real destination.
 

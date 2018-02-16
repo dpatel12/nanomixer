@@ -1,7 +1,7 @@
 <img src="https://raw.githubusercontent.com/juanjux/raimix/master/img/logo.png" 
  alt="RaiMixer logo" title="RaiMixer" align="right" width=180px />
 
-# RaiMixer: local transaction scrambler for Raiblocks
+# NanoMixer: local transaction scrambler for Nano
 
 <img src="https://raw.githubusercontent.com/juanjux/raimix/master/img/gui.png" 
  alt="RaiMixer GUI" title="RaiMixer" width=640px />
@@ -143,11 +143,12 @@ usage: raimixer [-h] [-w WALLET] [-s SOURCE_ACC] [-c] [-d] [-i INITIAL_AMOUNT]
                 [-p RPC_PORT] [-g]
                 [dest_acc] [amount]
 
- ____       _ __  __ _
-|  _ \ __ _(_)  \/  (_)_  _____ _ __
-| |_) / _` | | |\/| | \ \/ / _ \ '__|
-|  _ < (_| | | |  | | |>  <  __/ |
-|_| \_\__,_|_|_|  |_|_/_/\_\___|_|
+  _   _                     __  __ _               
+ | \ | |                   |  \/  (_)              
+ |  \| | __ _ _ __   ___   | \  / |___  _____ _ __ 
+ | . ` |/ _` | '_ \ / _ \  | |\/| | \ \/ / _ \ '__|
+ | |\  | (_| | | | | (_) | | |  | | |>  <  __/ |   
+ |_| \_|\__,_|_| |_|\___/  |_|  |_|_/_/\_\___|_|   
 
 Mix/scramble RaiBlocks transactions between random local accounts before
 sending to the real destination.
