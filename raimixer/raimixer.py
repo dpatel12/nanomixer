@@ -46,7 +46,7 @@ class RaiMixer:
         self.tx_counter                   = 0
         self.rpc: Optional[rairpc.RaiRPC] = rpc
         self.print_func                   = print
-
+ 
     def set_print_func(self, func):
         self.print_func = func
 
@@ -169,7 +169,7 @@ class RaiMixer:
             self.tx_counter    -= 1
             raise e
 
-        self.print_func("\nSending {} KRAI from [...{}] to [...{}]".format(
+        self.print_func("\nSending {} KNANO from [...{}] to [...{}]".format(
             amount // rairpc.KRAI_TO_RAW, orig[-8:], dest[-8:]))
 
         self._check_balances()
