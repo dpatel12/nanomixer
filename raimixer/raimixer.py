@@ -90,7 +90,7 @@ class NanoMixer:
         self._send_to_dest()
 
         self.print_func(f'\nDone! Total transactions done: {self.tx_counter}')
-        self.print_func('If you like this program consideer donating to the author:')
+        self.print_func('If you like this program consider donating to the author:')
         self.print_func(f'{DONATE_ADDR}')
         if not self.leave_remainder:
             assert(self.balances[self.orig_account] == self.initial_tosend - self.real_tosend)
