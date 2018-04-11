@@ -23,7 +23,7 @@ from raimixer.utils import DONATE_ADDR, delete_empty_accounts
 # TODO: more tests
 
 
-class RaiMixerException(Exception):
+class NanoMixerException(Exception):
     pass
 
 
@@ -31,7 +31,7 @@ class WalletLockedException(Exception):
     pass
 
 
-class RaiMixer:
+class NanoMixer:
     def __init__(self, wallet: str, num_mix_accounts: int=5, num_rounds: int=4,
             rpc: Optional[rairpc.RaiRPC] = None) -> None:
 
@@ -55,7 +55,7 @@ class RaiMixer:
               representatives: List[str]) -> None:
 
         if type(real_tosend) != int or type(initial_tosend) != int:
-            raise RaiMixerException('real_tosend and initial_tosend must be integers')
+            raise NanoMixerException('real_tosend and initial_tosend must be integers')
 
         self.orig_account             = orig_account
         self.dest_account             = dest_account

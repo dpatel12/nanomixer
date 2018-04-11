@@ -1,24 +1,17 @@
-<img src="https://raw.githubusercontent.com/juanjux/raimix/master/img/logo.png" 
+<img src="https://raw.githubusercontent.com/juanjux/raimix/master/img/logo.png"
  alt="RaiMixer logo" title="RaiMixer" align="right" width=180px />
 
 # NanoMixer: local transaction scrambler for Nano
 
-<img src="https://raw.githubusercontent.com/juanjux/raimix/master/img/gui.png" 
+<img src="https://raw.githubusercontent.com/juanjux/raimix/master/img/gui.png"
  alt="RaiMixer GUI" title="RaiMixer" width=640px />
-
-This video shows a simple session using RaiMixer to send a transaction to a destination
-account using a single round of mixing and 3 mixing accounts (18 transactions in total):
-
-<a href="https://asciinema.org/a/WObUOx2b6rvnMOe9WyARXEd2Z" target="_blank">
-   <img src="https://asciinema.org/a/WObUOx2b6rvnMOe9WyARXEd2Z.png" />
-</a>
 
 ## IMPORTANT
 
 This is not finished. It needs more tests, documentation, and more
 anonymity features.
 
-**It could also could eat your funds alive and leave you poor and homeless. 
+**It could also could eat your funds alive and leave you poor and homeless.
 You've been warned.**
 
 ## What is this?
@@ -27,18 +20,18 @@ This is a fund mixer/shaker to improve anonymity on
 [Nano](https://nano.org) transactions. It will create a (configurable)
 number of mixer accounts and send the amount between them and the original
 source account in a number of (configurable) mixing rounds until finally all the
-funds are sent to the destination account. 
+funds are sent to the destination account.
 
 This takes advantage of the fast and feeless transactions of the awesome
 [Nano Cryptocurrency](https://nano.org).
 
-## Is this safe? 
+## Is this safe?
 
 Depends on your definition of safe. This probably won't protect you from a well
 done blockchain analysis by professionals. But since they can only get a
 certain % of certainly, that lowers as you increase the number of mixing rounds
 and accounts, it's very improbable that it could be used as solid evidence in a
-trial, for example. 
+trial, for example.
 
 In case you missed the warning in the first section, please note that this is
 currently a very early release and some things will improve and there could be
@@ -62,8 +55,8 @@ RaiShaker avoids that problem mixing the funds from its users together.
 But this also have some advantages over an online mixer:
 
 - You don't have the trust the online mixer operator (that will know where the
-  funds came from and where they'll go). 
-  
+  funds came from and where they'll go).
+
 - This is probably faster since the online mixers have to wait until they have a
   minimum amount of users to start the mixing process.
 
@@ -75,7 +68,7 @@ The bottleneck is the small POW done on every transaction and the fact that, at
 least on my tests, the node doesn't seem to parallelize RPC requests even if
 it's configured to use several threads or receive them on different connections.
 So it'll depend on the number of transactions, which in turn will depend on the
-number of mixing accounts and mixing rounds configured. 
+number of mixing accounts and mixing rounds configured.
 
 This number of transactions can't be exactly predicted because the program
 randomized some things, but a typical 4-accounts, 2 rounds mixing produces about
@@ -93,7 +86,7 @@ pip install pyqt5 # only if you want to use the GUI
 Note: [**Python 3.6 required**](https://www.python.org/downloads/release/python-364/).
 
 First, edit your `~/RaiBlocks/config.json` and set to `"true"` the settings called
-`enable_control` and `rpc_enable`. The close and reopen your wallet or node 
+`enable_control` and `rpc_enable`. The close and reopen your wallet or node
 and unlock it. It must remain running while this script runs. The program will
 remind you if either of these things is not done.
 
@@ -110,7 +103,7 @@ raimixer <destination_account> <ammount>
 ```
 
 This will use the default wallet and accounts as specified in RaiBlock's
-`config.json` file. You can use the options `--wallet` and `--source_acc` to 
+`config.json` file. You can use the options `--wallet` and `--source_acc` to
 set specific ones if you want.
 
 The amount must end with "mrai" for megarais or "krai" for kilorais. Smaller amounts
@@ -128,7 +121,7 @@ If the RaiBlocks node or wallet crashes during the operation (which sometimes
 happens), you can use the `--clean` option to recover all amounts in all the
 accounts except the one you set as `--source_acc`. Please note that this can't
 make out mixing accounts from previous sessions from user-created accounts, so
-if you want to keep some amount in other accounts you'll have to move the 
+if you want to keep some amount in other accounts you'll have to move the
 fund manually (or run this and then restore the funds later, `--clean` won't
 delete any account.)
 
@@ -145,7 +138,7 @@ usage: raimixer [-h] [-w WALLET] [-s SOURCE_ACC] [-c] [-d] [-i INITIAL_AMOUNT]
 
   _   _                     __  __ _               
  | \ | |                   |  \/  (_)              
- |  \| | __ _ _ __   ___   | \  / |___  _____ _ __ 
+ |  \| | __ _ _ __   ___   | \  / |___  _____ _ __
  | . ` |/ _` | '_ \ / _ \  | |\/| | \ \/ / _ \ '__|
  | |\  | (_| | | | | (_) | | |  | | |>  <  __/ |   
  |_| \_|\__,_|_| |_|\___/  |_|  |_|_/_/\_\___|_|   
@@ -204,4 +197,4 @@ If you want to contribute a PR for any of these points you're more than welcome!
 
 ## I want to thank you!
 
-xrb_3usnd3kirzfudprd3tceauh3sejxpfm754jgnjajbttrefx9obgdqe69wfcf
+xrb_3usnd3kirzfudprd3tceauh3sejxpfm754jgnjajbttrefx9obgdqe69wfcf (Original Maker's address)

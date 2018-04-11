@@ -20,10 +20,10 @@ setup(
     description = description,
     long_description = long_descr,
     license = 'GPL 3.0',
-    url = 'https://github.com/juanjux/raimixer',
-    download_url = 'https://github.com/juanjux/raimixer/archive/%s.tar.gz' % version,
-    author = 'Juanjo Alvarez',
-    author_email = 'gorthol@protonmail.com',
+    url = 'https://github.com/anamhira47/nanomixer',
+    download_url = 'https://github.com/anamhira47/nanomixer/archive/master.zip' % version,
+    author = 'Anam Hira',
+    author_email = 'hira.anam49@gmail.com',
     packages = find_packages(exclude=['tests']),
     entry_points = {
         'console_scripts': [
