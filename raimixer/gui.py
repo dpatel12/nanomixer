@@ -376,7 +376,7 @@ class RaimixerGUI(QMainWindow):
                                 QMessageBox.Ok, QMessageBox.Ok)
             return
 
-        self.guimixer = RaiMixerThreadWrapper(rai)
+        self.guimixer = NanoMixerThreadWrapper(rai)
         self.guimixer.set_start_params(
             self._get_selected_account(),
             self.dest_edit.text(),
@@ -587,7 +587,7 @@ class ConfigWindow(QMainWindow):
         self.main_layout.addWidget(buttons_groupbox)
 
 
-class RaiMixerThreadWrapper(QThread):
+class NanoMixerThreadWrapper(QThread):
 
     text_available  = pyqtSignal(object)
     mixing_finished = pyqtSignal()
