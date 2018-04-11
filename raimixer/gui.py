@@ -36,8 +36,8 @@ from requests import ConnectionError
 # TODO: tooltips
 # TODO: move the settings and the wrappers to another file, move all under gui/ dir
 
-MRAI_TEXT = 'XRB/MRAI'
-KRAI_TEXT = 'KRAI'
+MRAI_TEXT = 'NANO/MNANO'
+KRAI_TEXT = 'KNANO'
 
 
 def _unit_combo():
@@ -82,7 +82,7 @@ class RaimixerGUI(QMainWindow):
         self.create_buttons_box()
         self.create_log_box()
 
-        self.setWindowTitle('RaiMixer')
+        self.setWindowTitle('NANOMixer')
 
         # Timer to check & update the connection status to the wallet
         self.wallet_conn_timer = QTimer(self)
