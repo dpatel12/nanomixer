@@ -19,7 +19,7 @@ You've been warned.**
 This is a fund mixer/shaker to improve anonymity on
 [Nano](https://nano.org) transactions. It will create a (configurable)
 number of mixer accounts and send the amount between them and the original
-source account in a number of (configurable) mixing rounds until finally all the
+source account in a several (configurable) mixing rounds until finally all the
 funds are sent to the destination account.
 
 This takes advantage of the fast and feeless transactions of the awesome
@@ -27,19 +27,18 @@ This takes advantage of the fast and feeless transactions of the awesome
 
 ## Is this safe?
 
-Depends on your definition of safe. This probably won't protect you from a well
-done blockchain analysis by professionals. But since they can only get a
-certain % of certainly, that lowers as you increase the number of mixing rounds
+The answer depends on your definition of safe. This probably won't protect you from a well-done blockchain analysis by professionals. But since they can only get a
+certain % of certainty, that lowers as you increase the number of mixing rounds
 and accounts, it's very improbable that it could be used as solid evidence in a
-trial, for example.
+trial, for example. That is why we recommend that you increase the number of mixing roudns and accounts if possible to make the process safer.
 
 In case you missed the warning in the first section, please note that this is
 currently a very early release and some things will improve and there could be
-bugs.
+bugs.Feel free to reach out 
 
-## Won't the nodes know where the amounts are coming because of my IP?
+## Won't the nodes know where the amounts are coming from because of my IP?
 
-No, nodes doesn't have a way to know of a block they're receiving is being
+No, nodes don't have a way to know if a block they're receiving is being
 originated in a peer or simply propagated.
 
 ## Is this safer than an online mixer?
@@ -48,11 +47,11 @@ Not really. The advantage of an online mixer like
 [RaiShaker](https://raishaker.net/) is that it mixes amounts from different
 users. So even while nodes can't know if different accounts are from the same or
 different persons, a comprehensive analysis could see if all the funds from the
-first transactions before mixing came from knew exchanges accounts and thus can
-guess than the transactions following that one are to the mixers accounts.
-RaiShaker avoids that problem mixing the funds from its users together.
+first transactions before mixing came from known exchanges accounts and thus can
+guess that the transactions following that one are to the mixers accounts.
+RaiShaker avoids that problem by mixing the funds from its users together.
 
-But this also have some advantages over an online mixer:
+But this also has some advantages over an online mixer:
 
 - You don't have the trust the online mixer operator (that will know where the
   funds came from and where they'll go).
@@ -60,7 +59,7 @@ But this also have some advantages over an online mixer:
 - This is probably faster since the online mixers have to wait until they have a
   minimum amount of users to start the mixing process.
 
-To be double safe you could use RaiMixer before sending to RaiShaker.
+To be double safe you could use RaiMixer before sending it to RaiShaker.
 
 ## How much time does it take?
 
@@ -86,7 +85,7 @@ pip install pyqt5 # only if you want to use the GUI
 Note: [**Python 3.6 required**](https://www.python.org/downloads/release/python-364/).
 
 First, edit your `~/RaiBlocks/config.json` and set to `"true"` the settings called
-`enable_control` and `rpc_enable`. The close and reopen your wallet or node
+`enable_control` and `rpc_enable`. Then close and reopen your wallet or node
 and unlock it. It must remain running while this script runs. The program will
 remind you if either of these things is not done.
 
@@ -111,7 +110,7 @@ are not supported at the moment (but you can use decimals).
 
 Another interesting option that you could want to consider is
 `--initial_amount`. This will make the mixing send the specified bigger amount
-than the one actually needed to make analysis harder; excess amount will be
+than the one needed to make analysis harder; the excess amount will be
 returned to the source account at the end of the process.
 
 Mixing accounts will be deleted at the end of the operation if everything
