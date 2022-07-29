@@ -18,8 +18,8 @@ You've been warned.**
 
 This is a fund mixer/shaker to improve anonymity on
 [Nano](https://nano.org) transactions. It will create a (configurable)
-number of mixer accounts and send the amount between them and the original
-source account in a several (configurable) mixing rounds until finally all the
+number of mixer accounts and send the amount between them and the
+source account in several (configurable) mixing rounds until finally all the
 funds are sent to the destination account.
 
 This takes advantage of the fast and feeless transactions of the awesome
